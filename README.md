@@ -1,4 +1,4 @@
-# Getting Started with 1w33k project
+# Getting Started with Hackaton project
 
 Steps:
 
