@@ -3,7 +3,7 @@ import React from "react";
 import { useMoralis } from "react-moralis";
 
 const Header = () => {
-  const { authenticate, isAuthenticated, account, logout, user } = useMoralis();
+  const { authenticate, isAuthenticated, logout, user } = useMoralis();
   const getEllipsisTxt = (str, n = 4) => {
     if (str) {
       return `${str.slice(0, n)}...${str.slice(str.length - n)}`;

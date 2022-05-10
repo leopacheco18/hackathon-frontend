@@ -7,6 +7,13 @@
   margin-left: 10px;
 }
 
+.mr-3 {
+  margin-right: 10px;
+}
+.mr-5 {
+  margin-right: 30px;
+}
+
 .header {
   width: 100vw;
   background-color: #8f71c9;
@@ -15,20 +22,4 @@
 .header-content {
   padding: 10px;
   text-align: right;
-}
-
-.metamask-button {
-  padding: 10px;
-  border-radius: 5px;
-  background-color: black;
-  cursor: pointer;
-  color: white;
-  border: none;
-  transition: 0.5s all;
-}
-
-.metamask-button:hover {
-  background-color: white;
-  color: black;
-  transition: 0.5s all;
 }
