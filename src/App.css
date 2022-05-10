@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
 .button-rounded {
   background-color: white;
   padding: 10px 35px;
@@ -11,7 +12,7 @@
   transform-style: preserve-3d;
   transition: all 175ms cubic-bezier(0, 0, 1, 1);
 
-  font-family: PT Mono;
+  font-family: "PT Mono", monospace;
   font-weight: 700;
   line-height: 39px;
   letter-spacing: 0em;
