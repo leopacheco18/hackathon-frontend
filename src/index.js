@@ -9,8 +9,8 @@ import "antd/dist/antd.min.css"; // or 'antd/dist/antd.less'
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <MoralisProvider
-    appId="kwmPuGTZtcQZThf2XdILN7KxHRnpbUgqCnpKknEv"
-    serverUrl="https://7le1uljg3khm.usemoralis.com:2053/server"
+    appId="CccstgVAgiYhtcVgiEXIAGjL7yXlWo3JlZFkmQYU"
+    serverUrl="https://f3ucyjippcca.usemoralis.com:2053/server"
   >
     <App />
   </MoralisProvider>

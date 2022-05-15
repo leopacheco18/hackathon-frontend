@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Header from "./components/global/Header";
 // import Footer from "./components/global/Footer";
 import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         renders the first one that matches the current URL. */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/login" element={<Login />}></Route>
       </Routes>
       {/* <Footer /> */}
     </Router>
