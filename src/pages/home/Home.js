@@ -16,12 +16,21 @@ const Home = () => {
       });
     }
   }, [authError]);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/certificateOverview");
+    }
+  }, [isAuthenticated]);
+
   return (
     <>
       <div className="home-container">
         <img src={BG} alt="background" className="bg-image"></img>
         <div className="centered">
           <h1 className="home-title">CertDefi</h1>
+        </div>
+        <div className="top-right">
           {isAuthenticated ? (
             <button className="button-rounded metamask-button" onClick={logout}>
               Sign Out
@@ -31,7 +40,7 @@ const Home = () => {
               className="button-rounded metamask-button"
               onClick={authenticate}
             >
-              Add a wallet
+              Connect your wallet
               <img
                 className="metamask-icon"
                 src={MetamaskIcon}
@@ -39,15 +48,6 @@ const Home = () => {
               ></img>
             </button>
           )}
-        </div>
-        <div className="top-right">
-          <button className="button-rounded headers-button mr-3">Create</button>
-          <button
-            className="button-rounded headers-button"
-            onClick={() => navigate("/login")}
-          >
-            Login
-          </button>
         </div>
       </div>
       <div className="home-container-content">

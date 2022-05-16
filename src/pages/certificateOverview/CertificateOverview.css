@@ -1,0 +1,63 @@
+.certificate-overview-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.certificate-overview-img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.certificate-overview-name {
+  font-family: "PT Mono", monospace;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0em;
+  color: #1601ff;
+}
+
+.certificate-overview-item {
+  width: 25%;
+  padding-right: 50px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.certificate-overview-item:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+.certificate-overview-buttons-container {
+  display: flex;
+  gap: 50px;
+}
+
+.certificate-overview-buttons {
+  font-size: 24px;
+  width: calc(25% - 50px);
+  margin: 30px 0 60px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .certificate-overview-item {
+    width: 100%;
+    padding-right: 0;
+    cursor: pointer;
+
+    transition: all 0.5s;
+  }
+
+  .certificate-overview-buttons-container {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .certificate-overview-buttons {
+    font-size: 24px;
+    width: 100%;
+    margin: 30px 0 30px 0;
+  }
+}

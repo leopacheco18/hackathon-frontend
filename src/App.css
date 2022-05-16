@@ -41,6 +41,12 @@
   left: 40vh;
 }
 
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
 .centered {
   position: absolute;
   top: 50%;

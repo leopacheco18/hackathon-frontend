@@ -1,0 +1,93 @@
+.certificate-template-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.certificate-template-gallery {
+  width: 40%;
+}
+
+.certificate-template-content {
+  width: 60%;
+}
+
+.certificate-template-gallery-container {
+  position: relative;
+  padding: 10px 45px;
+}
+
+.certificate-template-preview-container {
+  background-color: white;
+  border: 1px solid #1601ff;
+}
+
+.certificate-template-preview-container > img {
+  width: 100%;
+}
+
+.max-height-gallery {
+  overflow: auto;
+  max-height: calc(100vh - 350px);
+}
+
+.max-height-content {
+  overflow: auto;
+  height: calc(100vh - 525px);
+}
+
+.certificate-template-gallery-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.certificate-template-gallery-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 122, 0, 0.3) 13.42%,
+    rgba(219, 117, 255, 0.3) 82.94%
+  );
+  border-radius: 30px;
+}
+
+.certificate-template-gallery-item {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  background-color: white;
+}
+.certificate-template-gallery-item:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+.certificate-template-gallery-item > img {
+  width: 100%;
+}
+
+.certificate-template-gallery-item > div {
+  font-family: "PT Mono", monospace;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0em;
+  margin: auto;
+}
+.certificate-template-gallery-item-active {
+  color: #1601ff;
+  border: 1px solid #1601ff;
+}
+
+.certificate-template-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.certificate-template-buttons {
+  font-size: 24px;
+}

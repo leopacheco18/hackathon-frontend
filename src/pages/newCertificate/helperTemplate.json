@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Template 01",
+    "image": "https://ipfs.moralis.io:2053/ipfs/QmY3HA2k62FmA6X6C237fhjenH9gwPZ7yC29gZotYMLQtX/media/0"
+  },
+  {
+    "id": 2,
+    "name": "Template 02",
+    "image": "https://ipfs.moralis.io:2053/ipfs/QmY3HA2k62FmA6X6C237fhjenH9gwPZ7yC29gZotYMLQtX/media/0"
+  },
+  {
+    "id": 3,
+    "name": "Template 03",
+    "image": "https://ipfs.moralis.io:2053/ipfs/QmY3HA2k62FmA6X6C237fhjenH9gwPZ7yC29gZotYMLQtX/media/0"
+  },
+  {
+    "id": 4,
+    "name": "Template 04",
+    "image": "https://ipfs.moralis.io:2053/ipfs/QmY3HA2k62FmA6X6C237fhjenH9gwPZ7yC29gZotYMLQtX/media/0"
+  },
+  {
+    "id": 5,
+    "name": "Template 05",
+    "image": "https://ipfs.moralis.io:2053/ipfs/QmY3HA2k62FmA6X6C237fhjenH9gwPZ7yC29gZotYMLQtX/media/0"
+  }
+]

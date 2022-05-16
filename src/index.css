@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+  height: unset !important;
+}
+
 .ml-3 {
   margin-left: 10px;
 }
@@ -16,11 +21,112 @@
 }
 
 .header {
-  width: 100vw;
-  background-color: #8f71c9;
+  margin-bottom: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.header-button {
+  font-size: 24px;
+  z-index: 2;
+}
+
+.ellipse {
+  height: 220px;
+  width: 110%;
+  border-radius: 50%;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 122, 0, 0.3) 13.42%,
+    rgba(219, 117, 255, 0.3) 82.94%
+  );
+  position: absolute;
+  top: -103px;
+  left: -5%;
+  z-index: 1;
+}
+
+.header-title {
+  cursor: pointer;
+  position: relative;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 105.47px;
+  color: #ffffff;
+  margin-bottom: 0;
+  z-index: 2;
+  text-shadow: 2px 0 0 #5200ff, -2px 0 0 #5200ff, 0 2px 0 #5200ff,
+    0 -2px 0 #5200ff, 1px 1px #5200ff, -1px -1px 0 #5200ff, 1px -1px 0 #5200ff,
+    -1px 1px 0 #5200ff, 0 1px 0 #5200ff, 0 2px 0 #5200ff, 0 3px 0 #5200ff,
+    0 4px 0 #db75ff, 0 5px 0 #db75ff, 0 6px 0 #db75ff, 0 7px 0 #db75ff,
+    0 8px 0 #db75ff, 0 9px 0 #db75ff, 0 10px 0 #5200ff, 0 11px 0 #5200ff,
+    0 12px 0 #5200ff, 0 13px 0 #5200ff, 0 14px 0 #db75ff, 0 15px 0 #db75ff,
+    0 16px 0 #db75ff, 0 17px 0 #db75ff, 0 18px 0 #db75ff, 0 19px 0 #db75ff,
+    0 20px 0 #db75ff, 0 21px 0 #5200ff, 0 22px 0 #5200ff, 0 23px 0 #5200ff;
 }
 
 .header-content {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.signOut {
+  margin: auto 0;
+}
+
+.container {
+  margin: 0 30px;
+}
+
+.boxGray {
   padding: 10px;
-  text-align: right;
+  width: 100%;
+  background-color: #e5e5e5;
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 47px;
+  letter-spacing: 0em;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-content {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .header-title {
+    margin-left: 0;
+    font-size: 3.5rem;
+    margin-top: 0;
+    line-height: 85px;
+    text-align: center;
+    text-shadow: 1px 0 0 #5200ff, -1px 0 0 #5200ff, 0 1px 0 #5200ff,
+      0 -1px 0 #5200ff, 1px 1px #5200ff, -1px -1px 0 #5200ff, 1px -1px 0 #5200ff,
+      -1px 1px 0 #5200ff, 0 1px 0 #5200ff, 0 2px 0 #5200ff, 0 3px 0 #db75ff,
+      0 4px 0 #db75ff, 0 5px 0 #db75ff, 0 6px 0 #5200ff, 0 7px 0 #5200ff,
+      0 8px 0 #db75ff, 0 9px 0 #db75ff, 0 10px 0 #db75ff, 0 11px 0 #db75ff,
+      0 12px 0 #5200ff, 0 13px 0 #5200ff;
+  }
+  .text-right {
+    text-align: center;
+  }
+
+  .signOut {
+    margin: auto;
+  }
+  .header-button {
+    font-size: 10px;
+    z-index: 2;
+    margin-right: 0;
+  }
 }

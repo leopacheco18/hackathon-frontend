@@ -1,43 +1,34 @@
-import { message } from "antd";
 import React from "react";
 import { useMoralis } from "react-moralis";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const { authenticate, isAuthenticated, logout, user } = useMoralis();
-  const getEllipsisTxt = (str, n = 4) => {
-    if (str) {
-      return `${str.slice(0, n)}...${str.slice(str.length - n)}`;
-    }
-    return "";
-  };
+  const { isAuthenticated, logout } = useMoralis();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const copyToClipboard = () => {
-    let temp = document.createElement("textarea");
-    temp.value = user.get("ethAddress");
-    document.body.appendChild(temp);
-    temp.select();
-    document.execCommand("copy");
-    document.body.removeChild(temp);
-    message.success("Copy to clipboard");
-  };
+  if (location.pathname === "/") {
+    return <></>;
+  }
+
+  if (!isAuthenticated) {
+    navigate("/");
+  }
 
   return (
-    <div className="header">
-      <div className="header-content">
-        {isAuthenticated ? (
-          <>
-            <button className="metamask-button" onClick={copyToClipboard}>
-              {getEllipsisTxt(user.get("ethAddress"))}
+    <div className="container">
+      <div className="header ">
+        <div className="ellipse"></div>
+        <div className="header-content">
+          <div className="header-title" onClick={() => navigate("/")}>
+            CertDefi
+          </div>
+          <div className="text-right signOut">
+            <button className="button-rounded header-button" onClick={logout}>
+              Sign Out
             </button>
-            <button className="metamask-button ml-3" onClick={logout}>
-              LogOut
-            </button>
-          </>
-        ) : (
-          <button className="metamask-button" onClick={authenticate}>
-            Login With Metamask
-          </button>
-        )}
+          </div>
+        </div>
       </div>
     </div>
   );
