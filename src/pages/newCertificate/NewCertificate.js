@@ -254,7 +254,12 @@ const NewCertificate = () => {
           <div className="certificate-template-buttons-container">
             <button
               className="button-rounded certificate-template-buttons"
-              onClick={() => setShowEdit(true)}
+              onClick={() => {
+                setCurrent(0);
+                setCreationFrom({});
+                setFormErrors([]);
+                setShowEdit(true);
+              }}
             >
               Edit Details
             </button>
