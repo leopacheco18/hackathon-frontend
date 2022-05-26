@@ -49,7 +49,6 @@ const CourseDetails = () => {
   useEffect(() => {
     if (certificateDetails.length > 0) {
       setTemplateSelected(certificateDetails[0]);
-      console.log(Object.keys(certificateDetails[0]));
     }
   }, [certificateDetails]);
 

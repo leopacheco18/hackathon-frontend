@@ -31,7 +31,6 @@ const NewCourse = () => {
   useEffect(() => {
     if (error && loading) {
       if (error.message) {
-        console.log(error.message);
         notification.error({
           description: error.message,
         });
