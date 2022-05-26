@@ -33,10 +33,12 @@ const CourseDetails = () => {
     if (isValid === 2) {
       navigate("/holder");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isValid]);
 
   useEffect(() => {
     if (user) validateAddress();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   useEffect(() => {
@@ -79,6 +81,7 @@ const CourseDetails = () => {
               {certificateDetails.length > 0 &&
                 certificateDetails.map((item, index) => (
                   <div
+                    key={index}
                     className={
                       "certificate-template-gallery-item " +
                       (index === current
@@ -119,8 +122,8 @@ const CourseDetails = () => {
                       <th>Value</th>
                     </thead>
                     <tbody>
-                      {Object.keys(templateSelected).map((item) => (
-                        <tr>
+                      {Object.keys(templateSelected).map((item, key) => (
+                        <tr key={key}>
                           <td> {removeAndCapitalize(item)} </td>
                           <td> {templateSelected[item]} </td>
                         </tr>

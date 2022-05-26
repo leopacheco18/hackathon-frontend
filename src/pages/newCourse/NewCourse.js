@@ -358,8 +358,9 @@ const NewCourse = () => {
           <BoxGray>
             <div className="text-center">Templates</div>
             <div className="certificate-template-gallery-container max-height-gallery">
-              {helper.map((item) => (
+              {helper.map((item, key) => (
                 <div
+                  key={key}
                   className={
                     "certificate-template-gallery-item " +
                     (item.id === templateSelected.id

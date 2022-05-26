@@ -32,6 +32,7 @@ const Holder = () => {
               {certificateDetails.length > 0 &&
                 certificateDetails.map((item, key) => (
                   <div
+                    key={key}
                     className={
                       "certificate-holder-gallery-item " +
                       (key === current
@@ -71,8 +72,8 @@ const Holder = () => {
                         <th>Value</th>
                       </thead>
                       <tbody>
-                        {Object.keys(certificateSelected).map((item) => (
-                          <tr>
+                        {Object.keys(certificateSelected).map((item, key) => (
+                          <tr key={key}>
                             <td> {removeAndCapitalize(item)} </td>
                             <td> {certificateSelected[item]} </td>
                           </tr>

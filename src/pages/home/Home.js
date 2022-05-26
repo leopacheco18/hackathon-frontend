@@ -21,6 +21,7 @@ const Home = () => {
     if (isAuthenticated) {
       navigate("/certificateOverview");
     }
+    // eslint-disable-next-line
   }, [isAuthenticated]);
 
   return (

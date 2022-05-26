@@ -478,8 +478,8 @@ const NewCertificate = () => {
           <BoxGray>
             <div className="new-certificate-form-container">
               {steps[current].title}
-              {steps[current].content.map((item) => (
-                <div className="new-certificate-input-group">
+              {steps[current].content.map((item, key) => (
+                <div className="new-certificate-input-group" key={key}>
                   <label className="new-certificate-label">
                     {item.label}
                     {item.required && <span className="text-danger"> * </span>}
