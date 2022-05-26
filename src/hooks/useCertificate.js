@@ -62,8 +62,11 @@ export const useCertificate = (contract) => {
         params: options,
         // eslint-disable-next-line no-loop-func
         onSuccess: async (data) => {
-          let result = await fetch(data);
-          arr.push(await result.json());
+          let urlArr = data.split("/");
+          let ipfsHash = urlArr[urlArr.length - 1];
+          let url = `https://gateway.moralisipfs.com/ipfs/${ipfsHash}`;
+          let response = await fetch(url);
+          arr.push(await response.json());
           if (item === 0) {
             setCertificateDetails(arr);
           }
