@@ -6,7 +6,8 @@ const useAllowedList = () => {
   const { user } = useMoralis();
   const { fetch } = useMoralisQuery(
     "AllowedList",
-    (query) => query.fullText("ethAddress", user?.get("ethAddress")),
+    (query) =>
+      query.fullText("ethAddress", user ? user.get("ethAddress") : " "),
     [user],
     {
       autoFetch: false,

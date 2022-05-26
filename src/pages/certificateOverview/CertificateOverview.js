@@ -10,10 +10,9 @@ const CertificateOverview = () => {
   const navigate = useNavigate();
   const { user } = useMoralis();
   const { isValid, validateAddress } = useAllowedList();
-  const { getNFTBalances } = useNFTBalances();
   const { fetch, data } = useMoralisQuery(
     "Course",
-    (query) => query.equalTo("owner", user?.get("ethAddress")),
+    (query) => query.fullText("owner", user ? user.get("ethAddress") : " "),
     [user],
     {
       autoFetch: false,
@@ -27,9 +26,6 @@ const CertificateOverview = () => {
   useEffect(() => {
     if (user && user.get("ethAddress") && isValid === 1) {
       fetch();
-      getNFTBalances({ chain: "matic" }).then((data) => {
-        console.log(data);
-      });
     }
   }, [user, isValid]);
 
