@@ -31,6 +31,7 @@ const Header = () => {
           description:
             "Your wallet is now on the allowed list. This page will reload in 3 seconds",
         });
+        validateAddress();
         setTimeout(() => {
           navigate("/");
         }, 3000);

@@ -87,7 +87,10 @@ export const useHolderCertificates = () => {
         params: options,
         // eslint-disable-next-line no-loop-func
         onSuccess: async (data) => {
-          let result = await fetch(data);
+          let urlArr = data.split("/");
+          let ipfsHash = urlArr[urlArr.length - 1];
+          let url = `https://gateway.moralisipfs.com/ipfs/${ipfsHash}`;
+          let result = await fetch(url);
           arrAux.push(await result.json());
           if (arrAux.length === arr.length) {
             setCertificateDetails(arrAux);
