@@ -1,3 +1,4 @@
+import { notification } from "antd";
 import React, { useEffect, useState } from "react";
 import BoxGray from "../../components/global/BoxGray";
 import { useHolderCertificates } from "../../hooks/useHolderCertificates";
@@ -8,6 +9,16 @@ const Holder = () => {
   const [current, setCurrent] = useState(0);
   const [certificateSelected, setCertificateSelected] = useState({});
   const [showDetails, setShowDetails] = useState(false);
+
+  useEffect(() => {
+    notification.info({
+      message: "AllowedList",
+      description:
+        "Important, add your wallet to the allowed list using the button 'Add wallet to allowed list'",
+      duration: null,
+    });
+  }, []);
+
   useEffect(() => {
     if (certificateDetails.length > 0) {
       setCertificateSelected(certificateDetails[0]);
