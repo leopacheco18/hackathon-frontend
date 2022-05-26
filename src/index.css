@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Pinyon%20Script");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,19 @@
 body {
   overflow-x: hidden;
   height: unset !important;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 122, 0, 0.3) 13.42%,
+    rgba(219, 117, 255, 0.3) 82.94%
+  );
+  border-radius: 30px;
 }
 
 .ml-3 {
@@ -50,6 +64,19 @@ body {
   top: -103px;
   left: -5%;
   z-index: 1;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
 }
 
 .header-title {
@@ -98,7 +125,25 @@ body {
   letter-spacing: 0em;
 }
 
+.max-height-gallery {
+  overflow: auto;
+  height: calc(100vh - 350px) !important;
+}
+
+.max-height-content {
+  overflow: auto;
+  height: calc(100vh - 440px) !important;
+}
+
+.text-danger {
+  color: #df4759;
+}
+
 @media only screen and (max-width: 600px) {
+  .ellipse {
+    width: 100%;
+    left: 0;
+  }
   .header-content {
     margin-top: 10px;
     display: grid;
@@ -128,5 +173,13 @@ body {
     font-size: 10px;
     z-index: 2;
     margin-right: 0;
+  }
+
+  .boxGray {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .max-height-gallery {
+    height: fit-content !important;
   }
 }

@@ -4,6 +4,7 @@
 }
 
 .home-container-content {
+  padding: 0 7.5%;
   background: linear-gradient(
     180deg,
     rgba(247, 180, 171, 1) 0%,
@@ -11,8 +12,12 @@
   );
 
   padding-top: 30px;
-  text-align: center;
   margin-top: -1px;
+  padding-bottom: 60px;
+}
+
+.home-container-content > div {
+  margin: 40px 0;
 }
 
 .bg-image {
@@ -28,10 +33,33 @@
   font-family: "PT Mono", monospace;
   font-weight: 700;
   font-size: 60px;
+  margin-bottom: 0;
 }
 
 .home-content {
-  height: 50vh;
+  width: 80%;
+  background-color: white;
+  font-family: "PT Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 20px 30px;
+  border: 2px solid #1601ff;
+  box-shadow: 20px 20px #db75ff;
+}
+
+.team-content {
+  font-family: "PT Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.disclaimer-margin {
+  padding-left: 20% !important;
+  width: 120%;
 }
 
 .headers-button {
@@ -92,5 +120,22 @@
   .metamask-icon {
     width: 45px;
     padding-left: 15px;
+  }
+
+  .home-content {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px 15px;
+    border: 2px solid #1601ff;
+    box-shadow: 10px 10px #db75ff;
+  }
+
+  .team-content {
+    font-size: 12px;
+  }
+
+  .disclaimer-margin {
+    padding-left: 0% !important;
+    width: 100%;
   }
 }

@@ -7,6 +7,16 @@
 .certificate-overview-img {
   width: 100%;
   margin-bottom: 10px;
+  height: 25vh;
+}
+
+.certificate-overview-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+  border: 1px dashed darkgray;
+  border-radius: 30px;
 }
 
 .certificate-overview-name {

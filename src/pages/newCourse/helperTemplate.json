@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Template 01",
+    "image": "https://ipfs.moralis.io:2053/ipfs/QmYtJjNyPwNhVFmQA4QfKzB6MzQcSWeght2TX6vyPrBD4t/media/0"
+  },
+  {
+    "id": 2,
+    "name": "Template 02",
+    "image": "https://ipfs.moralis.io:2053/ipfs/QmYtJjNyPwNhVFmQA4QfKzB6MzQcSWeght2TX6vyPrBD4t/media/1"
+  },
+  {
+    "id": 3,
+    "name": "Template 03",
+    "image": "https://ipfs.moralis.io:2053/ipfs/QmYtJjNyPwNhVFmQA4QfKzB6MzQcSWeght2TX6vyPrBD4t/media/2"
+  }
+]

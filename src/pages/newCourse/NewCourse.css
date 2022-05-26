@@ -82,29 +82,29 @@
   font-size: 24px;
 }
 
-.new-cetificate-form {
+.new-course-form {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
 }
 
-.new-cetificate-form > div {
+.new-course-form > div {
   width: 60%;
 }
 
-.new-certificate-label {
+.new-course-label {
   font-family: Roboto;
   font-size: 16px;
   font-style: italic;
   font-weight: 500;
 }
-.new-certificate-input-group {
+.new-course-input-group {
   line-height: 18px;
   margin-bottom: 10px;
 }
 
-.new-certificate-error {
+.new-course-error {
   font-family: Roboto;
   font-size: 12px;
   color: red;
@@ -112,22 +112,22 @@
   line-height: 14px;
 }
 
-.new-certificate-button-container {
+.new-course-button-container {
   margin-bottom: 30px;
   text-align: right;
 }
 
-.new-certificate-form-container {
+.new-course-form-container {
   height: 60vh;
   padding: 0 30px;
   overflow: auto;
 }
 
-.new-certificate-form-container::-webkit-scrollbar {
+.new-course-form-container::-webkit-scrollbar {
   width: 5px;
 }
 
-.new-certificate-form-container::-webkit-scrollbar-thumb {
+.new-course-form-container::-webkit-scrollbar-thumb {
   background: linear-gradient(
     270deg,
     rgba(255, 122, 0, 0.3) 13.42%,
@@ -136,7 +136,7 @@
   border-radius: 30px;
 }
 
-.new-certificate-review-title {
+.new-course-review-title {
   font-family: Roboto;
   font-size: 52px;
   font-weight: 700;
@@ -145,7 +145,7 @@
   margin-bottom: 0;
 }
 
-.new-certificate-review-address {
+.new-course-review-address {
   font-family: Roboto;
   font-size: 24px;
   font-weight: 700;
@@ -178,22 +178,50 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .new-certificate-button-container {
-    text-align: center;
+  .certificate-template-container {
+    flex-direction: column;
+    padding-bottom: 30px;
   }
-  .certificate-template-buttons {
-    margin-bottom: 30px;
+  .certificate-template-gallery,
+  .certificate-template-content {
+    width: 100%;
   }
-  .new-certificate-review-title {
-    font-size: 25px;
+
+  .certificate-template-gallery-container {
+    padding: 10px 10px;
+    display: flex;
+    gap: 30px;
+    height: auto !important;
+    max-height: calc(100vh - 440px) !important;
   }
-  .new-certificate-review-address {
-    font-size: 12px;
+  .certificate-template-gallery-item {
+    grid-template-columns: 100%;
+    padding: 10px;
+  }
+
+  .certificate-template-gallery-item > div {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .certificate-template-gallery-item > img {
+    width: 150px;
+  }
+  .certificate-template-gallery-container::-webkit-scrollbar {
+    height: 5px;
+  }
+  .certificate-template-subtitle {
     overflow-wrap: break-word;
-    line-height: 14px;
-    margin-top: 10px;
   }
-  .new-certificate-form-container {
+  .certificate-template-buttons-container {
+    justify-content: center;
+  }
+  .new-cetificate-form > div {
+    width: 100%;
+  }
+  .new-course-form-container {
     padding: 0 15px;
+  }
+  .new-course-review-title {
+    font-size: 25px;
   }
 }
