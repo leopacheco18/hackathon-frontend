@@ -198,7 +198,7 @@ const NewCourse = () => {
       // let songsMetadata = [...metadataAllIPFS];
       let options = {
         abi: abi,
-        contractAddress: "0x085d50e2ef8ec566244015B650b95BD5d6409D4D",
+        contractAddress: "0x08E63A412B6794a1F07e1121049f713918C5F354",
         functionName: "createNewCourse",
         params: {
           _name: name,

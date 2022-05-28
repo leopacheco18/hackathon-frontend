@@ -11,7 +11,7 @@ const CertificateOverview = () => {
   const { user } = useMoralis();
   const { isValid, validateAddress } = useAllowedList();
   const { fetch, data } = useMoralisQuery(
-    "Course",
+    "Courses",
     (query) => query.fullText("owner", user ? user.get("ethAddress") : " "),
     [user],
     {

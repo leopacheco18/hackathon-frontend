@@ -66,7 +66,9 @@ export const useCertificate = (contract) => {
           let ipfsHash = urlArr[urlArr.length - 1];
           let url = `https://gateway.moralisipfs.com/ipfs/${ipfsHash}`;
           let response = await fetch(url);
-          arr.push(await response.json());
+          let jsonToAdd = await response.json();
+          jsonToAdd.token_id = item;
+          arr.push(jsonToAdd);
           if (item === 0) {
             setCertificateDetails(arr);
           }

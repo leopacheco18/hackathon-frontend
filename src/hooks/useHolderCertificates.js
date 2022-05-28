@@ -91,7 +91,10 @@ export const useHolderCertificates = () => {
           let ipfsHash = urlArr[urlArr.length - 1];
           let url = `https://gateway.moralisipfs.com/ipfs/${ipfsHash}`;
           let result = await fetch(url);
-          arrAux.push(await result.json());
+          let jsonToAdd = await result.json();
+          jsonToAdd.token_id = item.id;
+          jsonToAdd.course_address = item.address;
+          arrAux.push(jsonToAdd);
           if (arrAux.length === arr.length) {
             setCertificateDetails(arrAux);
           }

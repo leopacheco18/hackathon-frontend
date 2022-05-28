@@ -23,6 +23,25 @@ body::-webkit-scrollbar-thumb {
   border-radius: 30px;
 }
 
+.w-100 {
+  width: 100% !important;
+}
+
+.advice-funds {
+  font-size: 13px;
+  font-weight: 100;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.buttons-to-add-funds {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .ml-3 {
   margin-left: 10px;
 }
@@ -123,6 +142,20 @@ body::-webkit-scrollbar-thumb {
   font-weight: 600;
   line-height: 47px;
   letter-spacing: 0em;
+  position: relative;
+}
+.show-balance {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 0px 20px;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 122, 0, 0.3) 13.42%,
+    rgba(219, 117, 255, 0.3) 82.94%
+  );
 }
 
 .max-height-gallery {
@@ -181,5 +214,11 @@ body::-webkit-scrollbar-thumb {
   }
   .max-height-gallery {
     height: fit-content !important;
+  }
+  .show-balance{
+    position: unset;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 10px 20px;
   }
 }

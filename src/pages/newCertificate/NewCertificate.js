@@ -48,7 +48,7 @@ const NewCertificate = () => {
     }
   );
   const { fetch, data } = useMoralisQuery(
-    "Course",
+    "Courses",
     (query) =>
       query
         .equalTo("owner", user?.get("ethAddress"))

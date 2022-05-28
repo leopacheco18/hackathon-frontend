@@ -1,6 +1,7 @@
 import { notification } from "antd";
 import React, { useEffect, useState } from "react";
 import BoxGray from "../../components/global/BoxGray";
+import { useGetRandomIdByTokenId } from "../../hooks/useGetRandomIdByTokenId";
 import { useHolderCertificates } from "../../hooks/useHolderCertificates";
 import "./Holder.css";
 
@@ -9,7 +10,7 @@ const Holder = () => {
   const [current, setCurrent] = useState(0);
   const [certificateSelected, setCertificateSelected] = useState({});
   const [showDetails, setShowDetails] = useState(false);
-
+  const { getRandomId, randomId } = useGetRandomIdByTokenId();
   useEffect(() => {
     notification.info({
       message: "AllowedList",
@@ -21,6 +22,10 @@ const Holder = () => {
 
   useEffect(() => {
     if (certificateDetails.length > 0) {
+      getRandomId(
+        certificateDetails[0].token_id,
+        certificateDetails[0].course_address
+      );
       setCertificateSelected(certificateDetails[0]);
     }
   }, [certificateDetails]);
@@ -52,6 +57,7 @@ const Holder = () => {
                     }
                     onClick={() => {
                       setCurrent(key);
+                      getRandomId(item.token_id, item.course_address);
                       setCertificateSelected(item);
                       setShowDetails(false);
                     }}
@@ -83,12 +89,25 @@ const Holder = () => {
                         <th>Value</th>
                       </thead>
                       <tbody>
-                        {Object.keys(certificateSelected).map((item, key) => (
-                          <tr key={key}>
-                            <td> {removeAndCapitalize(item)} </td>
-                            <td> {certificateSelected[item]} </td>
+                        {Object.keys(certificateSelected).map((item, key) => {
+                          if (item === "token_id") {
+                            return <></>;
+                          } else {
+                            return (
+                              <tr key={key}>
+                                <td> {removeAndCapitalize(item)} </td>
+                                <td> {certificateSelected[item]} </td>
+                              </tr>
+                            );
+                          }
+                        })}
+
+                        {randomId && (
+                          <tr>
+                            <td> Random Identifier </td>
+                            <td> {randomId} </td>
                           </tr>
-                        ))}
+                        )}
                       </tbody>
                     </table>
                   ) : (
