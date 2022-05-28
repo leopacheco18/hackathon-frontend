@@ -154,7 +154,10 @@ const NewCourse = () => {
       setShowReview(true);
     };
     imageObj.setAttribute("crossOrigin", "anonymous");
-    imageObj.src = templateSelected.image;
+    let urlArr = templateSelected.image.split("/");
+    let ipfsHash = urlArr[urlArr.length - 1];
+    let url = `https://gateway.moralisipfs.com/ipfs/${ipfsHash}`;
+    imageObj.src = url;
   };
 
   const capitalizeTitle = (txt) => {
