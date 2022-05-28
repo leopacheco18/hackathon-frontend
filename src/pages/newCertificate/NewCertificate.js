@@ -160,8 +160,8 @@ const NewCertificate = () => {
     };
     imageObj.setAttribute("crossOrigin", "anonymous");
 
-    let urlArr = data[0].get("image").split("/");
-    let ipfsHash = urlArr[urlArr.length - 1];
+    let urlArr = data[0].get("image").split("/ipfs/");
+    let ipfsHash = urlArr[1];
     let url = `https://gateway.moralisipfs.com/ipfs/${ipfsHash}`;
     imageObj.src = url;
   };

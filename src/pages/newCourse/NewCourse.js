@@ -153,8 +153,9 @@ const NewCourse = () => {
       });
       setShowReview(true);
     };
-    let urlArr = templateSelected.image.split("/");
-    let ipfsHash = urlArr[urlArr.length - 1];
+    imageObj.setAttribute("crossOrigin", "anonymous");
+    let urlArr = templateSelected.image.split("/ipfs/");
+    let ipfsHash = urlArr[1];
     let url = `https://gateway.moralisipfs.com/ipfs/${ipfsHash}`;
     console.log(url)
     imageObj.src = url;
