@@ -157,7 +157,6 @@ const NewCourse = () => {
     let urlArr = templateSelected.image.split("/ipfs/");
     let ipfsHash = urlArr[1];
     let url = `https://gateway.moralisipfs.com/ipfs/${ipfsHash}`;
-    console.log(url)
     imageObj.src = url;
   };
 
